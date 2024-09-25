@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgb(21, 21, 21) 35%, rgb(0, 98, 255) 100%);
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 2px solid #f0f;
+    padding: 10px; 
+    border-radius: 8px; 
+}
+
+/* Main heading style */
+.main-heading {
+    color: rgb(249, 52, 124);
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 1. Slide In Effect */
+.slide-in {
+    color: #ffffff;
+    transform: translateX(-100%);
+    animation: slideIn 1s ease-in forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* 2. Typing Effect */
+.typing {
+    color: #ffdab9;
+    border-right: 2px solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 3s steps(20) 1s forwards, blink 500ms steps(40) infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* 3. Bounce Effect */
+.bounce {
+    color: #f78bd0;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* 4. Zoom Effect */
+.zoom {
+    color: #7ffbc9;
+    transform: scale(0.5);
+    animation: zoomIn 1.5s forwards;
+}
+
+@keyframes zoomIn {
+    to {
+        transform: scale(1);
+    }
+}
+
+/* 5. Glowing Text Effect */
+.glow {
+    color: #fc3e3e;
+    text-shadow: 0 0 5px #fff, 0 0 10px #99ff66, 0 0 20px #bfff80,
+     0 0 40px #d4ff99, 0 0 80px #eeffcc;
+    animation: glowPulse 1.5s infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #99ff66, 0 0 20px #bfff80,
+         0 0 40px #d4ff99, 0 0 80px #eeffcc;
+    }
+    50% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #11e111, 0 0 30px #11e111,
+         0 0 50px #11e111, 0 0 100px #00b300;
+    }
+}
+
